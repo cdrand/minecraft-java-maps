@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "dist/minecraft-java-maps",
     "ignore": [
       "firebase.json",
       "**/.*",
