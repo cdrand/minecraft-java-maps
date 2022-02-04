@@ -1,0 +1,18 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.user-photo {
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.user-info {
+  display: flex;
+}

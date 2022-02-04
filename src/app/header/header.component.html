@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <div class="site-name">
+    <a href="/">Minecraft Java Maps</a>
+  </div>
+  <div class="nav-buttons">
+    <div class="public">
+      <button mat-button (click)="ViewDocs()">View Documentation</button>
+    </div>
+    <div class="private" *ngIf="authService.userData"></div>
+  </div>
+  <div class="user-data">
+    <button
+      *ngIf="!authService.userData"
+      mat-button
+      (click)="authService.GoogleAuth()"
+    >
+      Login With Google
+    </button>
+    <div class="user-info" *ngIf="authService.userData">
+      <img
+        src="{{ authService.userData.photoURL }}"
+        alt="{{ authService.userData.displayName }}"
+        class="user-photo"
+        (click)="ViewUser()"
+      />
+      <button mat-button (click)="authService.SignOut()">Logout</button>
+    </div>
+  </div>
+</mat-toolbar>

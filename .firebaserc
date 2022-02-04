@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "minecraft-java-maps": {
+      "hosting": {
+        "minecraft-java-maps": [
+          "minecraft-java-maps"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "minecraft-java-maps"
+  }
+}
