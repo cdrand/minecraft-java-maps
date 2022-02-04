@@ -1,11 +1,7 @@
 {
   "hosting": {
     "public": "dist/minecraft-java-maps",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",

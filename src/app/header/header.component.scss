@@ -16,3 +16,8 @@ a {
 .user-info {
   display: flex;
 }
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

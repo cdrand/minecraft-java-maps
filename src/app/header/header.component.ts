@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/docs'])
   }
   ViewUser() {
-    this.router.navigate(['/user'])
+    this.router.navigate(['/account'])
+  }
+  GoUpload() {
+    this.router.navigate(['/maps/upload'])
   }
 }

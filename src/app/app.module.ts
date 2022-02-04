@@ -13,9 +13,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HeaderComponent } from './header/header.component'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
+import { DocsComponent } from './docs/docs.component'
+import { UploadComponent } from './upload/upload.component'
+import { HomeComponent } from './home/home.component'
+import { AccountComponent } from './account/account.component'
+import { MatCardModule } from '@angular/material/card'
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    DocsComponent,
+    UploadComponent,
+    HomeComponent,
+    AccountComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +45,8 @@ import { MatButtonModule } from '@angular/material/button'
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

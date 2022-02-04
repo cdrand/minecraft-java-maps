@@ -1,0 +1,8 @@
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: fit-content;
+  max-width: 500px;
+}

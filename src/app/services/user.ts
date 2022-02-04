@@ -6,4 +6,6 @@ export interface User {
   emailVerified?: boolean | null
   banned?: boolean
   admin?: boolean
+  quota?: number
+  subscription?: string
 }

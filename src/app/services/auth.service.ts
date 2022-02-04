@@ -50,6 +50,7 @@ export default class AuthService {
       emailVerified: user.emailVerified,
       banned: false,
       admin: false,
+      quota: 100,
     }
     if (user.uid) {
       const foundUserData = await getDoc(doc(this.afs, 'users', user.uid))
@@ -58,7 +59,6 @@ export default class AuthService {
         return await setDoc(doc(this.afs, 'users', user.uid), userData)
       } else this.userData = foundUserData.data()
     }
-    throw new Error('User not found')
   }
   GoogleAuth() {
     return this.AuthLogin(new GoogleAuthProvider())
@@ -69,5 +69,10 @@ export default class AuthService {
       this.router.navigate(['/'])
       localStorage.removeItem('user')
     })
+  }
+  async GetCustomClaimRole() {
+    await this.afAuth.currentUser?.getIdToken(true)
+    const decodedToken = await this.afAuth.currentUser?.getIdTokenResult()
+    return decodedToken?.claims?.['stripeRole']
   }
 }

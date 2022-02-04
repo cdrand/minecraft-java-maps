@@ -6,7 +6,9 @@
     <div class="public">
       <button mat-button (click)="ViewDocs()">View Documentation</button>
     </div>
-    <div class="private" *ngIf="authService.userData"></div>
+    <div class="private" *ngIf="authService.userData">
+      <button mat-button (click)="GoUpload()">Upload</button>
+    </div>
   </div>
   <div class="user-data">
     <button
